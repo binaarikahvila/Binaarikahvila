@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Yhteystiedot. */
 router.get('/', function(req, res, next) {
-  res.send('Yhteystiedot tähän');
+  res.render('yhteystiedot', { title: 'Yhteystiedot' });
 });
 
 module.exports = router;
