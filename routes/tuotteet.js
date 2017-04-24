@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET Tuotelistaus. */
 router.get('/', function(req, res, next) {
-  res.send('Tuotteet tähän');
+  res.render('tuotteet', { title: 'Tuotteet' });
 });
 
 module.exports = router;
