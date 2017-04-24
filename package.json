@@ -1,6 +1,6 @@
 {
-  "name": "Binäärikahvila",
-  "version": "0.0.1",
+  "name": "sivusto",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
