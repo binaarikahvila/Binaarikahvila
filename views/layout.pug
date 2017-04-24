@@ -1,7 +1,12 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		header
+			a(href='/') Etusivu
+			a(href='/tuotteet') Tuotteet
+			a(href='/tilaus') Tilaukset
+			a(href='/yhteystiedot') Yhteystiedot
+		block content
