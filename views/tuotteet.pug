@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Ohessa ovat tarjolla olevat tuotteet. Maukkaita hetkiä!
+	p <br>
+	each tuote in context.tuote
+		h3= tuote.nimi
+		p= tuote.kuvaus
+		b: p= tuote.hinta
+	else
+		p Tuotteita ei löytynyt
