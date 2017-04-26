@@ -1,8 +1,52 @@
+@import url("reset.css");
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+	background-color: lightblue;
 }
 
-a {
-  color: #00B7FF;
+p {
+    padding: 10px;
 }
+
+#wrapper {
+	margin-left: 20%;
+    width: 100%;
+}
+
+#header {
+    float: left;
+    height: 75px;
+    width: 60%;
+    background: #FF6633;
+}
+
+#navigaatio {
+	font-size: 25px;
+	padding-top:10px;
+	padding-bottom:10px;
+    float: left;
+    width: 60%;
+    background: #FFCC33;
+}
+
+#sisältö {
+	text-align: center;
+    float: left;
+    background: #FFAAFF;
+    width: 60%;
+}
+
+#oikea {
+    background: #33CCFF;
+    width: 10%;
+    float: left;
+}
+
+#vasen {
+    background: #CC33FF;
+    width: 10%;
+	float: left;
+}
+    
