@@ -4,5 +4,5 @@
 #Log tiedostot
 *.log
 
-#Tunnukset
+#Kirjautumistiedot
 credentials.js

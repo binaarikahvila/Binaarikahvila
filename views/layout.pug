@@ -1,12 +1,24 @@
 doctype html
 html
+	meta(name="viewport" content="width=device-width, initial-scale=1")
 	head
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
-		header
+	div(id="wrapper")
+		div(id="header")
+		div(id="navigaatio")
+			|
+			|
 			a(href='/') Etusivu
+			|
+			|
 			a(href='/tuotteet') Tuotteet
+			|
+			|
 			a(href='/tilaus') Tilaukset
-			a(href='/yhteystiedot') Yhteystiedot
-		block content
+			|
+			|
+			a(href='/yhteystiedot') Yhteystiedo
+		div(id="sisältö")
+			block content
