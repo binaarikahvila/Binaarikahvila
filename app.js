@@ -4,6 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+var tunnukset = require('./credentials.js');
+
 
 var index = require('./routes/index');
 var tuotteet = require('./routes/tuotteet');
@@ -11,6 +15,24 @@ var tilaus = require('./routes/tilaus');
 var yhteystiedot = require('./routes/yhteystiedot');
 
 var app = express();
+
+var opts = {
+	server: {
+		socketOptions: { keepAlive: 1 }
+	}
+};
+
+//Mongoose ja Mlabiin kytkeytyminen
+switch(app.get('env')){
+	case 'development':
+		mongoose.connect(tunnukset.mongo.development.connectionString, opts);
+		break;
+	case 'production':
+		mongoose.connect(tunnukset.mongo.production.connectionString, opts);
+		break;
+	default:
+		throw new Error('Tuntematon ympäristö: ' + app.get('env'));
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

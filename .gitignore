@@ -3,3 +3,6 @@
 
 #Log tiedostot
 *.log
+
+#Tunnukset
+credentials.js
