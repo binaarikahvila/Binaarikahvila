@@ -3,29 +3,55 @@
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 15px;
-	background-color: lightblue;
+    background: #FF6633;
 }
 
 p {
     padding: 10px;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
 #wrapper {
 	margin-left: 20%;
     width: 100%;
+
 }
 
 #header {
     float: left;
     height: 75px;
     width: 60%;
-    background: #FF6633;
+	background-image: url(blueBinary.jpg);
 }
 
 #navigaatio {
 	font-size: 25px;
-	padding-top:10px;
-	padding-bottom:10px;
     float: left;
     width: 60%;
     background: #FFCC33;
@@ -38,15 +64,5 @@ p {
     width: 60%;
 }
 
-#oikea {
-    background: #33CCFF;
-    width: 10%;
-    float: left;
-}
 
-#vasen {
-    background: #CC33FF;
-    width: 10%;
-	float: left;
-}
     

@@ -7,18 +7,16 @@ html
 	body
 	div(id="wrapper")
 		div(id="header")
+			
 		div(id="navigaatio")
-			|
-			|
-			a(href='/') Etusivu
-			|
-			|
-			a(href='/tuotteet') Tuotteet
-			|
-			|
-			a(href='/tilaus') Tilaukset
-			|
-			|
-			a(href='/yhteystiedot') Yhteystiedo
+			ul
+				li 
+					a(href='/') Etusivu
+				li 
+					a(href='/tuotteet') Tuotteet
+				li 
+					a(href='/tilaus') Tilaukset
+				li 
+					a(href='/yhteystiedot') Yhteystiedo
 		div(id="sisältö")
 			block content
