@@ -11,11 +11,11 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	console.log('Napataan tietoja....');	
 	tilausKaavake.update(
-		{ nimi: req.body.nimi, 
+		{ sposti: req.body.sahkoposti,				
 		tapahtuma: req.body.tapahtuma,
 		},
-		{ sposti: req.body.sahkoposti,
-		 puhelin: req.body.puhnro,
+		{ nimi: req.body.nimi,
+		puhelin: req.body.puhnro,
 		maxOsallistuja: 13,
 		onkoTarjoilu: false,
 		kommentti: 'testi' },
