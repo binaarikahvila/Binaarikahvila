@@ -8,7 +8,7 @@ block content
 			.form-group
 				label Nimi:
 				| 
-				input#textinput.form-control.input-md(name='textinput', placeholder='Matti Meikäläinen', required='', type='text')
+				input#nimi.form-control.input-md(name='nimi', placeholder='Matti Meikäläinen', required='', type='text')
 			// Sähköpostin lisäys
 			.form-group
 				label Sähköposti:
@@ -43,8 +43,8 @@ block content
 			// Tarkistus tarjoilusta
 			.form-group
 				label Tarjoillaanko tapahtuman yhteydessä?
-				label(for='tarjoilu-0')
-					input#tarjoilu-0(name='tarjoilu', value='1', type='checkbox')
+				label(for='tarjoilu')
+					input#tarjoilu(name='tarjoilu', value='1', type='checkbox')
 					|       Kyllä
 			// Kommentit
 			.form-group
