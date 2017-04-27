@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var tilausKaavakeSkeema = mongoose.Schema({
+	pvm: String,
 	nimi: String,
 	sposti: String,
 	puhelin: String,
