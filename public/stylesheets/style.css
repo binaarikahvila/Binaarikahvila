@@ -1,9 +1,9 @@
-@import url("reset.css");
+﻿@import url("reset.css");
 
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 15px;
-    background: #FF6633;
+        background: red;
 }
 
 p {
@@ -38,31 +38,112 @@ li a:hover:not(.active) {
     background-color: #4CAF50;
 }
 #wrapper {
-	margin-left: 20%;
+	margin-left: 0%;
     width: 100%;
-
+	float:left;
 }
 
 #header {
     float: left;
     height: 75px;
-    width: 60%;
+    width: 100%;
 	background-image: url(blueBinary.jpg);
 }
 
 #navigaatio {
 	font-size: 25px;
     float: left;
-    width: 60%;
+    width: 100%;
     background: #FFCC33;
 }
 
 #sisältö {
 	text-align: center;
     float: left;
-    background: #FFAAFF;
-    width: 60%;
+    background: pink;
+    width: 100%;
 }
+#Tuotteet{
+	column-count:2;
+}
+
+@media screen and (min-width: 800px) {
+	#wrapper {
+		margin-left: 5%;
+	}
+	#header {
+		width: 90%;
+	}
+
+	#navigaatio {
+		width: 90%;
+		background: yellow;
+	}
+
+	#sisältö {
+		width: 90%;
+		background: blue;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#wrapper {
+		margin-left: 10%;
+	}
+	#header {
+		width: 80%;
+	}
+
+	#navigaatio {
+		width: 80%;
+		background: yellow;
+	}
+
+	#sisältö {
+		width: 80%;
+		background: blue;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#wrapper {
+		margin-left: 15%;
+	}
+	#header {
+		width: 70%;
+	}
+
+	#navigaatio {
+		width: 70%;
+		background: yellow;
+	}
+
+	#sisältö {
+		width: 70%;
+		background: blue;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	#wrapper {
+		margin-left: 20%;
+	}
+	#header {
+		width: 60%;
+	}
+
+	#navigaatio {
+		width: 60%;
+		background: yellow;
+	}
+
+	#sisältö {
+		width: 60%;
+		background: blue;
+	}
+}
+
+
 
 
     
