@@ -7,6 +7,7 @@ block content
 	each tuote in context.tuote
 		h3= tuote.nimi
 		p= tuote.kuvaus
-		b: p= tuote.hinta
+		p= tuote.hinta
+		p <br>
 	else
 		p Tuotteita ei löytynyt
