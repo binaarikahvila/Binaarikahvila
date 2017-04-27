@@ -10,6 +10,6 @@ var tilausKaavakeSkeema = mongoose.Schema({
 	kommentti: String,
 });
 
-var tilausKaavake = mongoose.model('tilausKaavake', tilausKaavakeSkeema);
+var TilausKaavake = mongoose.model('TilausKaavake', tilausKaavakeSkeema);
 
-module.exports = tilausKaavake;
+module.exports = TilausKaavake;

@@ -9,22 +9,25 @@ router.get('/', function(req, res, next) {
 
 /* POST Tilauskaavake. */
 router.post('/', function(req, res, next) {
-	console.log('Napataan tietoja....');
+	console.log('Napataan tietoja....');	
 	tilausKaavake.update(
-		{ nimi: req.body.nimi },
-		{ sposti: req.body.sahkoposti },
-		{ puhelin: req.body.puhnro },
-		{ tapahtuma: req.body.tapahtuma },
+		{ nimi: req.body.nimi, 
+		tapahtuma: req.body.tapahtuma,
+		},
+		{ sposti: req.body.sahkoposti,
+		 puhelin: req.body.puhnro,
+		maxOsallistuja: 13,
+		onkoTarjoilu: false,
+		kommentti: 'testi' },
 		{ upsert: true },		
 		function(err) {
 			if(err) {
 				console.error(err.stack);
-				return res.redirect(303, '/');
+				return res.redirect(303, '/tuotteet');
 			}
-			return res.redirect(303, '/');
+			return res.redirect(303, '/tilaus');
 		}
 	);
-	console.log('Tiedot tallennettu!');
 });
 
 module.exports = router;
