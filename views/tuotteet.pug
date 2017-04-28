@@ -6,9 +6,10 @@ block content
 	p <br>
 	div(id="Tuotteet")
 		each tuote in context.tuote
-			h3= tuote.nimi
-			p= tuote.kuvaus
-			p= tuote.hinta
+			div(id="Tuote")
+				h2= tuote.nimi
+				p= tuote.kuvaus
+				p= "Hinta: "+ tuote.hinta
 		else
 			p Tuotteita ei löytynyt
 
