@@ -1,14 +1,14 @@
 doctype html
 html
-	meta(name="viewport" content="width=device-width, initial-scale=1")
+	meta(name="viewport" content="width=device-width initial-scale=1")
 	head
 		title= title
 		link(rel='stylesheet' type="text/css" href='/stylesheets/style.css')
 	body
-	div(id="wrapper" class="raja")
-		div(id="header")
-			
-		div(id="navigaatio")
+	.sivu(id="wrapper")
+		.rajat(id="header")
+			h1 Kahvila Binääri
+		.rajat(id="navigaatio")
 			ul
 				li 
 					a(href='/') Etusivu
@@ -18,5 +18,6 @@ html
 					a(href='/tilaus') Tilaukset
 				li 
 					a(href='/yhteystiedot') Yhteystiedot
-		div(id="sisältö")
+		.rajat(id="sisältö")
 			block content
+		
