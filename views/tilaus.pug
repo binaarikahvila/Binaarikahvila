@@ -1,7 +1,10 @@
 extends layout
 
 block content
+	title= title
 	h1 Tilauskaavake
+	p Mikäli haluat varata kahvilamme tapahtumasi järjestyspaikaksi, ole hyvä ja täytä alla oleva kaavake. 
+	p Otamme yhteyttä mahdollisimman nopeasti!
 	form.form-horizontal(action="/tilaus" method="POST")
 		fieldset
 			// Nimen lisäys

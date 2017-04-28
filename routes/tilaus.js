@@ -5,7 +5,7 @@ var postiLahetys = require('../models/postivarmistus.js');
 
 /* GET Tilauskaavake. */
 router.get('/', function(req, res, next) {
-  res.render('tilaus');
+  res.render('tilaus', {title: "Tilaus"} );
 });
 
 /* POST Tilauskaavake. */
