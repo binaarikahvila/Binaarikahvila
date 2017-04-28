@@ -58,9 +58,12 @@ router.get('/', function(req, res, next) {
 					nimi: tuote.nimi,
 					kuvaus: tuote.kuvaus,
 					hinta: tuote.getEuroHinta(),
+					onLaktoositon: tuote.onLaktoositon,
+					onGluteeniton: tuote.onGluteeniton,
 				}
 			})
 		};		
+		console.log(context.tuote);
 		res.render('tuotteet', {title: 'Tuotteet', context: context});	
 	});	
 });
