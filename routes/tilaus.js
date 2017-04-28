@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var tilausKaavake = require('../models/tilauskaavake.js');
+var postiLahetys = require('../models/postivarmistus.js');
 
 /* GET Tilauskaavake. */
 router.get('/', function(req, res, next) {
@@ -19,6 +20,8 @@ router.post('/', function(req, res, next) {
 	if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
     today = yyyy+""+mm+""+dd;
 	
+	postiLahetys.lahetaPosti(req.body.sahkoposti);
+	
 	tilausKaavake.update(
 		{ sposti: req.body.sahkoposti,				
 		tapahtuma: req.body.tapahtuma,
@@ -36,8 +39,8 @@ router.post('/', function(req, res, next) {
 				return res.redirect(303, '/tuotteet');
 			}
 			return res.redirect(303, '/tilaus');
-		}
-	);
+		}		
+	);	
 });
 
 module.exports = router;
