@@ -63,7 +63,6 @@ router.get('/', function(req, res, next) {
 				}
 			})
 		};		
-		console.log(context.tuote);
 		res.render('tuotteet', {title: 'Tuotteet', context: context});	
 	});	
 });

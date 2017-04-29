@@ -10,33 +10,38 @@ router.get('/', function(req, res, next) {
 
 /* POST Tilauskaavake. */
 router.post('/', function(req, res, next) {
-	console.log('Napataan tietoja....');	
 	
-	//Päivämäärän haku DB:tä varten
+	//Tilauksen luonnin päivämäärän haku DB:tä varten
 	var today = new Date();
 	var dd = today.getDate();
 	var mm = today.getMonth()+1; //Tammikuu on 0!
 	var yyyy = today.getFullYear();
 	if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
-    today = yyyy+""+mm+""+dd;
+    today = yyyy+"-"+mm+"-"+dd;
 	
-	postiLahetys.lahetaPosti(req.body.sahkoposti);
+	//postiLahetys.lahetaPosti(req.body.sahkoposti);
 	
+	/*Tietokannan päivitys - mikäli samalla sähköpostilla, tapahtuman kuvauksella sekä
+	tilauspäivämäärällä ja -ajalla on jo luotu tilaus, muokkaa sen tietoja.
+	*/
 	tilausKaavake.update(
 		{ sposti: req.body.sahkoposti,				
 		tapahtuma: req.body.tapahtuma,
-		pvm: today,
+		tilausPaiva: req.body.paiva,
+		tilausTunti: req.body.aika,
 		},
-		{ nimi: req.body.nimi,
+		{ pvm: today,
+		nimi: req.body.nimi,
 		puhelin: req.body.puhnro,
 		maxOsallistuja: req.body.osallistujat,
-		onkoTarjoilu: req.body.tarjoilu,
+		onkoTarjoilu: req.body.tarjoilu,		
+		tilausKesto: req.body.kesto,
 		kommentti: req.body.kommentti },
 		{ upsert: true },		
 		function(err) {
 			if(err) {
 				console.error(err.stack);
-				return res.redirect(303, '/tuotteet');
+				return res.redirect(303, '/error');
 			}
 			return res.redirect(303, '/tilaus');
 		}		
