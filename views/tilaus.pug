@@ -11,34 +11,40 @@ block content
 			.lomake
 				.form-group
 						label Nimi:
-						input#nimi.form-control.input-md(name='nimi', placeholder='Matti Meikäläinen', required='', type='text')
+						input#nimi.form-control.input-md(name='nimi' placeholder='Matti Meikäläinen' required='' type='text')
 				// Sähköpostin lisäys
 				.form-group
 						label Sähköposti:
-						input#sahkoposti.form-control.input-md(name='sahkoposti', placeholder='matti@meikalainen.fi', required='', type='text')
+						input#sahkoposti.form-control.input-md(name='sahkoposti' placeholder='matti@meikalainen.fi' required='' type='text')
 				// Puh-numeron lisäys
 				.form-group
 						label Puhelin:
-						input#puhnro.form-control.input-md(name='puhnro', placeholder='0400123456', type='text')
+						input#puhnro.form-control.input-md(name='puhnro' placeholder='0400123456' type='text')
 				// Tapahtuman kuvailu
 				.form-group
 						label Tapahtuma:
-						textarea#tapahtuma.form-control(name='tapahtuma', placeholder='Millaisesta tapahtumasta on kyse?' ,required='', type='text')
+						textarea#tapahtuma.form-control(name='tapahtuma' placeholder='Millaisesta tapahtumasta on kyse?' required='' type='text')
 				// Tarkistus tarjoilusta
 				.form-group
 						label Tarjoillaanko tapahtuman yhteydessä?
-						input#tarjoilu(name='tarjoilu', value='1', type='checkbox')
+						input#tarjoilu(name='tarjoilu' value='1' type='checkbox')
 						label(id="Kyllä") Kyllä
 				// Osallistujien määrän valinta
 				.form-group
 						label Osallistujia maksimissaan:
-						select#osallistujat.form-control(name='osallistujat', required='')
-							option(value='5') 5
-							option(value='10') 10
-							option(value='15') 15
-							option(value='20') 20
-							option(value='25') 25
-							option(value='30') 30
+						input#osallistujat.form-control(name='osallistujat' required='' type='number' min='5' max='50')
+				// Päivä
+				.form-group
+						label Päivä:
+						input#paiva.form-control(name='paiva' required='' type='date')
+				// Alkamis aika
+				.form-group
+						label Alkaen:
+						input#aika.form-control(name='aika' required='' type='time')
+				// Kesto n.
+				.form-group
+						label Arvio kestosta tunneissa:
+						input#kesto.form-control(name='kesto' required='' type='number' min='1' max='16')
 				// Kommentit
 				.form-group
 					.kysely
