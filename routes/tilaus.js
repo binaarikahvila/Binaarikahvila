@@ -28,7 +28,7 @@ router.post('/', function(req, res, next) {
 		{ sposti: req.body.sahkoposti,				
 		tapahtuma: req.body.tapahtuma,
 		tilausPaiva: req.body.paiva,
-		tilausTunti: req.body.aika,
+		tilausTunti: req.body.alku,
 		},
 		{ pvm: today,
 		nimi: req.body.nimi,
