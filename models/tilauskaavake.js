@@ -8,6 +8,9 @@ var tilausKaavakeSkeema = mongoose.Schema({
 	tapahtuma: String,
 	maxOsallistuja: Number,
 	onkoTarjoilu: Boolean,
+	tilausPaiva: Date,
+	tilausTunti: Number,
+	tilausKesto: Number,
 	kommentti: String,
 });
 
