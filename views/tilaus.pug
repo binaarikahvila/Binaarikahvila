@@ -1,6 +1,16 @@
 extends layout
 
 block content
+	link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+	// Päivämäärän valitsimen enablointi ja luonti
+	script(src='https://code.jquery.com/jquery-1.12.4.js')
+	script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+	script.
+		$( function() {
+			$( "#paiva" ).datepicker({
+				});
+		});
+		
 	title= title
 	h1 Tilauskaavake
 	p Mikäli haluat varata kahvilamme tapahtumasi järjestyspaikaksi, ole hyvä ja täytä alla oleva kaavake. 
@@ -36,14 +46,14 @@ block content
 				// Päivä
 				.form-group
 						label Päivä:
-						input#paiva.form-control(name='paiva' required='' type='date')
-				// Alkamis aika
+						input#paiva.form-control(name='paiva' required='' type='text')
+				// Alkaen
 				.form-group
-						label Alkaen:
-						input#aika.form-control(name='aika' required='' type='time')
+						label Alkaen: x:00
+						input#kesto.form-control(name='alku' required='' type='number' min='6' max='22')
 				// Kesto n.
 				.form-group
-						label Arvio kestosta tunneissa:
+						label Kesto arvio n.h:
 						input#kesto.form-control(name='kesto' required='' type='number' min='1' max='16')
 				// Kommentit
 				.form-group
