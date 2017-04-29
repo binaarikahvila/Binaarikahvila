@@ -1,5 +1,33 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1= title
+	p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		|Morbi ornare rutrum odio, id posuere nulla ullamcorper sed. Morbi sed pretium ex. Aliquam 
+		|scelerisque sapien ac rhoncus feugiat. Sed venenatis eros aliquet enim volutpat maximus. 
+		|Donec id nisi felis. Nunc maximus sagittis justo at rhoncus. Cras hendrerit nisi purus, non 
+		|dictum augue laoreet eget. Nam non arcu risus. 
+	#googleMap(style='width:40%;height:400px;')
+	
+// Luo Google Maps kartan, jossa merkki joka pomppii.	
+	script.
+		function kartta() {
+			// Kartan alustus ja asetukset
+			var karttaPohja= {
+				center:new google.maps.LatLng(60.449115,22.295907),
+				zoom:15,
+			};
+			// Kartan luonti
+			var map=new google.maps.Map(document.getElementById("googleMap"),karttaPohja);
+			
+			// Merkin luonti
+			var paikka = new google.maps.Marker({
+				position:new google.maps.LatLng(60.449115,22.295907),
+				animation:google.maps.Animation.BOUNCE
+			});
+			
+			// Merkin sijoitus karttaan
+			paikka.setMap(map);
+		}
+	// Tämä skripti yhdistää Google API:n yllä olevaan karttakoodiin
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGi8vx7OmRyuVUeqFP43tmV2_rPpAxADQ&callback=kartta")
