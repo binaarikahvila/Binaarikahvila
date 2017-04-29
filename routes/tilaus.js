@@ -10,7 +10,6 @@ router.get('/', function(req, res, next) {
 
 /* POST Tilauskaavake. */
 router.post('/', function(req, res, next) {
-	console.log('Napataan tietoja....');	
 	
 	//Tilauksen luonnin päivämäärän haku DB:tä varten
 	var today = new Date();
