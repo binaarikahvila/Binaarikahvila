@@ -21,17 +21,20 @@ router.post('/', function(req, res, next) {
 	
 	//postiLahetys.lahetaPosti(req.body.sahkoposti);
 	
+	/*Tietokannan päivitys - mikäli samalla sähköpostilla, tapahtuman kuvauksella sekä
+	tilauspäivämäärällä ja -ajalla on jo luotu tilaus, muokkaa sen tietoja.
+	*/
 	tilausKaavake.update(
 		{ sposti: req.body.sahkoposti,				
 		tapahtuma: req.body.tapahtuma,
 		tilausPaiva: req.body.paiva,
+		tilausTunti: req.body.aika,
 		},
 		{ pvm: today,
 		nimi: req.body.nimi,
 		puhelin: req.body.puhnro,
 		maxOsallistuja: req.body.osallistujat,
 		onkoTarjoilu: req.body.tarjoilu,		
-		tilausTunti: req.body.aika,
 		tilausKesto: req.body.kesto,
 		kommentti: req.body.kommentti },
 		{ upsert: true },		
