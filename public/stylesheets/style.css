@@ -9,6 +9,8 @@ body {
 p {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 0.5em;
+	padding-left:0.5em;
+	padding-right:0.5em;
 }
 
 h1{
@@ -127,6 +129,17 @@ li a:hover:not(.active) {
 	margin-right:0px;
 }
 
+.karttaSijainti {
+	margin-top:3%;
+	margin-left:20%;
+	margin-right:20%;
+}
+
+#googleMap{
+	width:100%;
+	height:10em;
+}
+
 @media screen and (min-width: 800px) {
 	body{
 		background-image: url(blueBinary.jpg);
@@ -179,6 +192,20 @@ li a:hover:not(.active) {
 	.form-group{
 		margin-left:20%;
 		font-size:1em;
+	}
+	
+	.karttaSijainti {
+		margin-top:3%;
+		margin-left:50%;
+		margin-right:10%;
+	}
+	
+	#googleMap{
+		height:25em;
+	}
+	
+	.yhteys {
+		overflow:auto;
 	}
 
 }
