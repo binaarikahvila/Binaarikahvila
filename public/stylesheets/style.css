@@ -95,14 +95,16 @@ li a:hover:not(.active) {
 
 .lomake {
 	margin-top:2em;
+	display:block;
 }
 
 .form-group {
 	padding-left: 1em;
-	padding-right: 12em;
+	margin-right:35%;
 	margin-bottom: 1em;
-	display:inline-block;
+	display:block;
 	float:left;
+	font-size:0.5em;
 }
 
 .form-group label {
@@ -176,7 +178,9 @@ li a:hover:not(.active) {
 	}
 	.form-group{
 		margin-left:20%;
+		font-size:1em;
 	}
+
 }
 
 @media screen and (min-width: 1000px) {
