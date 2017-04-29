@@ -93,6 +93,10 @@ li a:hover:not(.active) {
 	float:left;
 }
 
+.lomake {
+	margin-top:2em;
+}
+
 .form-group {
 	padding-left: 1em;
 	padding-right: 12em;
@@ -199,4 +203,4 @@ li a:hover:not(.active) {
 
 
 
-    
+ 
