@@ -11,55 +11,54 @@ block content
 				});
 		});
 		
-	title= title
-	h1 Tilauskaavake
-	p Mikäli haluat varata kahvilamme tapahtumasi järjestyspaikaksi, ole hyvä ja täytä alla oleva kaavake. 
-	p Otamme yhteyttä mahdollisimman nopeasti!
+	h1= title
+	.sivu
+		p Mikäli haluat varata kahvilamme tapahtumasi järjestyspaikaksi, ole hyvä ja täytä alla oleva kaavake. Otamme yhteyttä mahdollisimman nopeasti!
+		p <br>
 	form.form-horizontal(action="/tilaus" method="POST")
 		fieldset
 			// Nimen lisäys
-			.lomake
-				.form-group
-						label Nimi:
-						input#nimi.form-control.input-md(name='nimi' placeholder='Matti Meikäläinen' required='' type='text')
-				// Sähköpostin lisäys
-				.form-group
-						label Sähköposti:
-						input#sahkoposti.form-control.input-md(name='sahkoposti' placeholder='matti@meikalainen.fi' required='' type='text')
-				// Puh-numeron lisäys
-				.form-group
-						label Puhelin:
-						input#puhnro.form-control.input-md(name='puhnro' placeholder='0400123456' type='text')
-				// Tapahtuman kuvailu
-				.form-group
-						label Tapahtuma:
-						textarea#tapahtuma.form-control(name='tapahtuma' placeholder='Millaisesta tapahtumasta on kyse?' required='' type='text')
-				// Tarkistus tarjoilusta
-				.form-group
-						label Tarjoillaanko tapahtuman yhteydessä?
-						input#tarjoilu(name='tarjoilu' value='1' type='checkbox')
-						label(id="Kyllä") Kyllä
-				// Osallistujien määrän valinta
-				.form-group
-						label Osallistujia maksimissaan:
-						input#osallistujat.form-control(name='osallistujat' required='' type='number' min='5' max='50')
-				// Päivä
-				.form-group
-						label Päivä:
-						input#paiva.form-control(name='paiva' required='' type='text')
-				// Alkaen
-				.form-group
-						label Alkaen: x:00
-						input#kesto.form-control(name='alku' required='' type='number' min='6' max='22')
-				// Kesto n.
-				.form-group
-						label Kesto arvio n.h:
-						input#kesto.form-control(name='kesto' required='' type='number' min='1' max='16')
-				// Kommentit
-				.form-group
-					.kysely
-						label Lisäkommentit:
-						textarea#kommentti.form-control(name='kommentti', type='text')
-				// Button
-				.form-group
-					input(type='submit' value='Lähetä')
+			.form-group
+					label Nimi:
+					input#nimi.form-control.input-md(name='nimi' placeholder='Matti Meikäläinen' required='' type='text')
+			// Sähköpostin lisäys
+			.form-group
+					label Sähköposti:
+					input#sahkoposti.form-control.input-md(name='sahkoposti' placeholder='matti@meikalainen.fi' required='' type='text')
+			// Puh-numeron lisäys
+			.form-group
+					label Puhelin:
+					input#puhnro.form-control.input-md(name='puhnro' placeholder='0400123456' type='text')
+			// Tapahtuman kuvailu
+			.form-group
+					label Tapahtuma:
+					textarea#tapahtuma.form-control(name='tapahtuma' placeholder='Millaisesta tapahtumasta on kyse?' required='' type='text')
+			// Tarkistus tarjoilusta
+			.form-group
+					label Tarjoillaanko tapahtuman yhteydessä?
+					input#tarjoilu(name='tarjoilu' value='1' type='checkbox')
+					label(id="Kyllä") Kyllä
+			// Osallistujien määrän valinta
+			.form-group
+					label Osallistujia maksimissaan:
+					input#osallistujat.form-control(name='osallistujat' required='' type='number' min='5' max='50')
+			// Päivä
+			.form-group
+					label Päivä:
+					input#paiva.form-control(name='paiva' required='' type='text')
+			// Alkaen
+			.form-group
+					label Alkaen: x:00
+					input#kesto.form-control(name='alku' required='' type='number' min='6' max='22')
+			// Kesto n.
+			.form-group
+					label Kesto arvio n.h:
+					input#kesto.form-control(name='kesto' required='' type='number' min='1' max='16')
+			// Kommentit
+			.form-group
+				.kysely
+					label Lisäkommentit:
+					textarea#kommentti.form-control(name='kommentti', type='text')
+			// Button
+			.form-group
+				input(type='submit' value='Lähetä')

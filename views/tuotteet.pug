@@ -2,19 +2,20 @@ extends layout
 
 block content
 	h1= title
-	p Ohessa ovat tarjolla olevat tuotteet. Maukkaita hetkiä!
-	p Laktoosittomat tuotteet on merkattu L-kirjaimella, ja gluteenittomat G-kirjaimella
-	p <br>
-	div(id="Tuotteet")
-		each tuote in context.tuote
-			div(id="Tuote")
-				h2= tuote.nimi
-				p= tuote.kuvaus
-				p= "Hinta: "+ tuote.hinta
-				if tuote.onLaktoositon
-					|L 
-				if tuote.onGluteeniton
-					|G 
-		else
-			p Tuotteita ei löytynyt
+	.sivu
+		p Ohessa ovat tarjolla olevat tuotteet. Maukkaita hetkiä!
+		p Laktoosittomat tuotteet on merkattu L-kirjaimella, ja gluteenittomat G-kirjaimella
+		div(id="Tuotteet")
+			each tuote in context.tuote
+				div(id="Tuote")
+					h2= tuote.nimi
+					p= tuote.kuvaus
+					p= "Hinta: "+ tuote.hinta
+					p
+						if tuote.onLaktoositon
+							| L 
+						if tuote.onGluteeniton
+							| G 
+			else
+				p Tuotteita ei löytynyt
 
