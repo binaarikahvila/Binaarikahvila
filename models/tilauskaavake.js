@@ -9,7 +9,7 @@ var tilausKaavakeSkeema = mongoose.Schema({
 	maxOsallistuja: Number,
 	onkoTarjoilu: Boolean,
 	tilausPaiva: Date,
-	tilausTunti: String,
+	tilausTunti: Number,
 	tilausKesto: Number,
 	kommentti: String,
 });
