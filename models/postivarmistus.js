@@ -32,6 +32,8 @@ exports.lahetaPosti = function(tiedot){
 			'\n<p><b>Odotamme innolla tuloanne!',
 		generateTextFromHtml: true,		
 	}, function(err){
-		if (err) console.error( 'Postitusvirhe: '+ err );
+		if (err) {
+			console.error( 'Postitusvirhe: '+ err );
+		}
 	});
 };
