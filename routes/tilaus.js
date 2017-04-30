@@ -19,8 +19,6 @@ router.post('/', function(req, res, next) {
 	if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
     today = yyyy+"-"+mm+"-"+dd;
 	
-	console.log(req.body);
-	
 	postiLahetys.lahetaPosti(req.body);
 	
 	/*Tietokannan päivitys - mikäli samalla sähköpostilla, tapahtuman kuvauksella sekä
